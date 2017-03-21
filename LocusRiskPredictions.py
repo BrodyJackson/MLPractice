@@ -43,5 +43,7 @@ classifier = neighbors.KNeighborsClassifier()
 classifier.fit(locusMutations, results)
 
 #Print what the results should be, followed by what the classifer predicts from testing data
+print("The actual results should have been: ")
 print (test_results)
+print("Predicted results were: ")
 print (classifier.predict(test_locusMutations))
