@@ -9,7 +9,6 @@ dataArray = np.genfromtxt('MOCK_DATA.csv', delimiter=',')
 dataArray = dataArray[1:]
 
 #format the genetic data into samples and results
-print("done")
 for patient in dataArray:
     temp = []
     for locus in patient:
@@ -17,11 +16,6 @@ for patient in dataArray:
     lastElement = temp.pop(-1)
     locusMutations.append(temp)
     results.append(lastElement)
-for i in locusMutations:
-    print(i)
-
-for i in results:
-    print(i)
 
 #remove data from whole set which we will use to test
 #the remaining data is what we will use to train
